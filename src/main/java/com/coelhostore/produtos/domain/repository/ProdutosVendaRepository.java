@@ -1,14 +1,13 @@
 package com.coelhostore.produtos.domain.repository;
 
-import com.coelhostore.produtos.domain.entities.ProdutosVarejoEstoque;
-import com.coelhostore.produtos.domain.entities.ProdutosVarejoVenda;
+import com.coelhostore.produtos.domain.entities.ProdutosVenda;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public interface ProdutosVendaRepository extends JpaRepository<ProdutosVarejoVenda, UUID> {
-    Optional<ProdutosVarejoVenda>findById(UUID uuid);
+public interface ProdutosVendaRepository extends JpaRepository<ProdutosVenda, UUID> {
+    Optional<ProdutosVenda>findById(UUID uuid);
 
-    Optional<ProdutosVarejoVenda>findBySku(String sku);
+    Optional<ProdutosVenda>findBySku(String sku);
 }

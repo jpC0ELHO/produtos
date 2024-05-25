@@ -10,7 +10,6 @@ import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "produtos_varejo")
@@ -21,7 +20,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class ProdutosVarejoEstoque extends Entidade{
+public class ProdutosEstoque extends Entidade{
 
     @Column(name = "sku",nullable = false)
     private String sku;
