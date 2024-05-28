@@ -19,7 +19,6 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class ProdutosEstoque extends Entidade{
 
     @Column(name = "sku",nullable = false)

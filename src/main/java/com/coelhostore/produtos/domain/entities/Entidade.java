@@ -56,7 +56,7 @@ public abstract class Entidade implements Serializable {
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    @Column(name = "created_at",nullable = false)
+    @Column(name = "update_at",nullable = false)
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime updateAt;
 }
