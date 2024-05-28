@@ -1,4 +1,4 @@
 package com.coelhostore.produtos.api.dto;
 
-public record ProdutoVendaResponse() {
+public record ProdutosVendaRequest() {
 }
