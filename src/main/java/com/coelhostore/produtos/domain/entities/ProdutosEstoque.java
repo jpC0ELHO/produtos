@@ -24,10 +24,8 @@ public class ProdutosEstoque extends Entidade{
 
     @Column(name = "sku",nullable = false)
     private String sku;
-
     @Column(name = "nome_produto",nullable = false)
-    private String nameProduto;
-
+    private String nomeProduto;
     @Column(name = "valor_produto",nullable = false)
     private BigDecimal valorProduto;
     @Column(name = "qtd_estoque",nullable = false)
