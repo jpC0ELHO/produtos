@@ -17,6 +17,7 @@ import java.util.Set;
 @EqualsAndHashCode(callSuper = true)
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+@Data
 public class EntidadeCnpj extends Entidade{
 
     @Column(nullable = false,unique = true,length = 20)

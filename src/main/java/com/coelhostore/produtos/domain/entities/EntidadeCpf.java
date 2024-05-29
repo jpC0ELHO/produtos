@@ -2,11 +2,25 @@ package com.coelhostore.produtos.domain.entities;
 
 import com.coelhostore.produtos.domain.entities.enums.Sexo;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.persistence.*;
+import lombok.*;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 import java.util.Set;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@Table(name = "tb_entidadepf")
+@Data
+@Entity
+@EntityListeners(AuditingEntityListener.class)
+@EqualsAndHashCode(callSuper = true)
 public class EntidadeCpf extends Entidade{
     @Column(nullable = false,unique = true,length = 20)
     private String cpf;
