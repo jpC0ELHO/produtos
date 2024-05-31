@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
@@ -22,6 +23,7 @@ import java.util.Set;
 @EntityListeners(AuditingEntityListener.class)
 @EqualsAndHashCode(callSuper = true)
 public class EntidadeCpf extends Entidade{
+    @CPF
     @Column(nullable = false,unique = true,length = 20)
     private String cpf;
 

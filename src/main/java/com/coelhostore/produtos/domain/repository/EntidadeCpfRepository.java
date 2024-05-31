@@ -10,5 +10,5 @@ public interface EntidadeCpfRepository extends JpaRepository<EntidadeCpf, UUID> 
 
     Optional<EntidadeCpf>findById(UUID uuid);
 
-    Optional<EntidadeCpf>findByNumero(String cep);
+    Optional<EntidadeCpf>findByCpf(String cpf);
 }

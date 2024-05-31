@@ -64,13 +64,13 @@ public class ProdutosEstoqueImpl implements ProdutosEstoqueService{
             throw new ProdutoEstoqueNotFoundException("Produto não encontrado!");
         }
         buscarProdutos.map(produtosEstoque -> {
-            produtosEstoque.setSku(produtosEstoque.getSku());
-            produtosEstoque.setNomeProduto(produtosEstoque.getNomeProduto());
-            produtosEstoque.setValorProduto(produtosEstoque.getValorProduto());
-            produtosEstoque.setQtdEstoque(produtosEstoque.getQtdEstoque());
-            produtosEstoque.setProdutosReservad(produtosEstoque.getProdutosReservad());
-            produtosEstoque.setQtdReservados(produtosEstoque.getQtdReservados());
-            produtosEstoque.setQtdProdutosTotal(produtosEstoque.getQtdProdutosTotal());
+            produtosEstoque.setSku(produtosEstoqueRequest.sku());
+            produtosEstoque.setNomeProduto(produtosEstoqueRequest.nomeProduto());
+            produtosEstoque.setValorProduto(produtosEstoqueRequest.valorProduto());
+            produtosEstoque.setQtdEstoque(produtosEstoqueRequest.qtdEstoque());
+            produtosEstoque.setProdutosReservad(produtosEstoqueRequest.produtosReservad());
+            produtosEstoque.setQtdReservados(produtosEstoqueRequest.qtdReservados());
+            produtosEstoque.setQtdProdutosTotal(produtosEstoqueRequest.qtdProdutosTotal());
            return produtosEstoqueRepository.save(produtosEstoque);
         });
     }

@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/api/produtos/estoque")
+@RequestMapping(value = "/api/produtos/estoque/v1")
 public class ProdutoEstoqueController {
     private final ProdutosEstoqueImpl produtosEstoque;
 
