@@ -2,7 +2,7 @@ package com.coelhostore.produtos.api.controller;
 
 import com.coelhostore.produtos.api.dto.ProdutosEstoqueRequest;
 import com.coelhostore.produtos.api.dto.ProdutosEstoqueResponse;
-import com.coelhostore.produtos.api.service.produtoEstoque.ProdutosEstoqueImpl;
+import com.coelhostore.produtos.api.service.produtoEstoque.ProdutosEstoqueService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RequestMapping(value = "/api/produtos/estoque/v1")
 public class ProdutoEstoqueController {
-    private final ProdutosEstoqueImpl produtosEstoque;
+    private final ProdutosEstoqueService produtosEstoque;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ProdutosEstoqueResponse>>buscarListaProdutos(){
