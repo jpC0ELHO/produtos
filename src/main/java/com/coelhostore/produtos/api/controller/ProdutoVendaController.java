@@ -5,7 +5,6 @@ import com.coelhostore.produtos.api.dto.ProdutoVendaResponse;
 import com.coelhostore.produtos.api.service.produtoVenda.ProdutoVendaService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

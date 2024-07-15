@@ -39,6 +39,7 @@ public record ProdutosEstoqueResponse(
         @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy HH:mm:ss")
         @JsonSerialize(using = JsonSerializer.class)
         @JsonDeserialize(using = JsonDeserializer.class)
+                
         LocalDateTime updateAt
 ) {
     public static ProdutosEstoqueResponse toResponse(ProdutosEstoque produtosEstoque){
